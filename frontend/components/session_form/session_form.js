@@ -25,7 +25,7 @@ function SessionForm(props) {
                           <Link to="/login">Log In</Link>;
   const errors = <ul>
                   {props.errors.map( error => {
-                    return <li>{error}</li>
+                    return <li key={error}>{error}</li>
                   })}
                 </ul>
   return (

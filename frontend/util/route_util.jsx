@@ -31,5 +31,5 @@ const mapStateToProps = state => {
 
 export const AuthRoute = withRouter(connect(
   mapStateToProps, null)(Auth))
-export const Protectedroute = withRouter(connect(
+export const ProtectedRoute = withRouter(connect(
   mapStateToProps, null)(Protected))

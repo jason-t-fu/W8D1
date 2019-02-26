@@ -1,9 +1,10 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import GreetingsContainer from './greeting/greeting_container';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
-
+import SearchContainer from './search_container';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
 
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
+      <Route exact path="/" component={ SearchContainer } />
     </div>
   )
 }
